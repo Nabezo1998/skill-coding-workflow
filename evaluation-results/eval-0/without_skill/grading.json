@@ -1,0 +1,34 @@
+{
+  "eval_id": 0,
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "DESIGN.mdまたは設計書ファイルが作成されている",
+      "passed": true,
+      "evidence": "outputs/design.md が作成済み（ファイル名が小文字だが内容は充実している）"
+    },
+    {
+      "text": "設計書提示後にユーザーへのレビュー依頼文が出力されている",
+      "passed": false,
+      "evidence": "workflow_output.mdを確認したところ、STEP1→STEP2→STEP3と連続して実行。ゲートメッセージなしで直接実装に進んだ"
+    },
+    {
+      "text": "具体的なTODOリスト（3項目以上）が作成されている",
+      "passed": true,
+      "evidence": "todo.md にプロジェクトセットアップ→基盤ファイル→API実装→品質確認の4フェーズが記載されている"
+    },
+    {
+      "text": "TODO提示後にユーザーへの承認依頼文が出力されている",
+      "passed": false,
+      "evidence": "ゲートメッセージなしで実装に直行した。ユーザーへの承認依頼は存在しない"
+    },
+    {
+      "text": "実装完了後に編集・作成したファイルの一覧が提示されている",
+      "passed": true,
+      "evidence": "STEP3の最後に9ファイルの一覧表が出力されている"
+    }
+  ],
+  "pass_count": 3,
+  "total_count": 5,
+  "pass_rate": 0.6
+}

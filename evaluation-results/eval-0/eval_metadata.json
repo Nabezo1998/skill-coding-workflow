@@ -1,0 +1,12 @@
+{
+  "eval_id": 0,
+  "eval_name": "new-feature-user-registration",
+  "prompt": "User registration API implementation task",
+  "assertions": [
+    {"name": "design_doc_created", "description": "DESIGN.md or design document file is created"},
+    {"name": "review_gate_1_present", "description": "Review request message is output after showing design doc"},
+    {"name": "todo_list_created", "description": "Specific TODO list with 3+ items is created"},
+    {"name": "review_gate_2_present", "description": "Approval request message is output after showing TODOs"},
+    {"name": "edited_files_listed", "description": "List of edited/created files is presented after implementation"}
+  ]
+}

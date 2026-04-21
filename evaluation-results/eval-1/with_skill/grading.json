@@ -1,0 +1,34 @@
+{
+  "eval_id": 1,
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "バグ調査・修正方針を含む設計書が作成されている",
+      "passed": true,
+      "evidence": "outputs/DESIGN.md が作成済み。エラー原因4パターン分析、修正方針（オプショナルチェーン、null合体、try-catch、型付きuseState）が記載されている"
+    },
+    {
+      "text": "設計書提示後にユーザーへのレビュー依頼文が出力されている",
+      "passed": true,
+      "evidence": "ステップ3に「ユーザーに設計書のレビューを依頼する【ゲート1】」セクションがある"
+    },
+    {
+      "text": "具体的な修正手順のTODOが作成されている",
+      "passed": true,
+      "evidence": "outputs/TODO.md に6項目の修正手順（エラー箇所特定→オプショナルチェーン→useState初期値→try-catch→nullチェック→保存）が記載されている"
+    },
+    {
+      "text": "TODO提示後にユーザーへの承認依頼文が出力されている",
+      "passed": true,
+      "evidence": "ステップ5に「ユーザーにTODOのレビューを依頼する【ゲート2】」がある"
+    },
+    {
+      "text": "実装後に変更ファイルの一覧が提示されている",
+      "passed": true,
+      "evidence": "ステップ7に4ファイルの一覧表（DESIGN.md, TODO.md, Login.tsx, workflow_output.md）がある"
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

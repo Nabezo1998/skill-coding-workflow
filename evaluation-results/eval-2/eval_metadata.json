@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "refactoring-date-helpers",
+  "prompt": "Refactor dateHelper.ts: split into format and calculation files",
+  "assertions": [
+    {"name": "design_doc_created", "description": "Design document with refactoring plan is created"},
+    {"name": "review_gate_1_present", "description": "Review request message is output after showing design doc"},
+    {"name": "todo_list_created", "description": "Specific file-splitting TODO list is created"},
+    {"name": "review_gate_2_present", "description": "Approval request message is output after showing TODOs"},
+    {"name": "edited_files_listed", "description": "List of created/modified files is presented after implementation"}
+  ]
+}

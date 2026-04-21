@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "skill_name": "coding-workflow",
+    "skill_path": "/c/Users/nabekura/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/9480983c-9759-4583-8acd-b803fc1b8da6/50b32feb-0bd7-4159-8b47-f636d7dee62a/skills/coding-workflow",
+    "executor_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-21T00:00:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "new-feature-user-registration",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 124.6,
+        "tokens": 26897
+      },
+      "expectations": [
+        {"text": "DESIGN.mdまたは設計書ファイルが作成されている", "passed": true, "evidence": "outputs/DESIGN.md が作成済み"},
+        {"text": "設計書提示後にユーザーへのレビュー依頼文が出力されている", "passed": true, "evidence": "ステップ3に【ゲート1】セクションあり"},
+        {"text": "具体的なTODOリスト（3項目以上）が作成されている", "passed": true, "evidence": "7項目のTODO（TODO-01〜TODO-07）"},
+        {"text": "TODO提示後にユーザーへの承認依頼文が出力されている", "passed": true, "evidence": "ステップ5に【ゲート2】セクションあり"},
+        {"text": "実装完了後に編集・作成したファイルの一覧が提示されている", "passed": true, "evidence": "ステップ7に8ファイルの一覧表あり"}
+      ]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "new-feature-user-registration",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 139.4,
+        "tokens": 28811
+      },
+      "expectations": [
+        {"text": "DESIGN.mdまたは設計書ファイルが作成されている", "passed": true, "evidence": "design.md が作成済み"},
+        {"text": "設計書提示後にユーザーへのレビュー依頼文が出力されている", "passed": false, "evidence": "ゲートメッセージなしでSTEP1→2→3と直接実装"},
+        {"text": "具体的なTODOリスト（3項目以上）が作成されている", "passed": true, "evidence": "todo.md に4フェーズのタスクあり"},
+        {"text": "TODO提示後にユーザーへの承認依頼文が出力されている", "passed": false, "evidence": "承認依頼なしで実装に直行"},
+        {"text": "実装完了後に編集・作成したファイルの一覧が提示されている", "passed": true, "evidence": "STEP3に9ファイルの一覧表あり"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "bug-fix-undefined-error",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 88.2,
+        "tokens": 22611
+      },
+      "expectations": [
+        {"text": "バグ調査・修正方針を含む設計書が作成されている", "passed": true, "evidence": "DESIGN.mdにエラー4パターン分析・修正方針あり"},
+        {"text": "設計書提示後にユーザーへのレビュー依頼文が出力されている", "passed": true, "evidence": "ステップ3に【ゲート1】あり"},
+        {"text": "具体的な修正手順のTODOが作成されている", "passed": true, "evidence": "TODO.mdに6項目の修正手順あり"},
+        {"text": "TODO提示後にユーザーへの承認依頼文が出力されている", "passed": true, "evidence": "ステップ5に【ゲート2】あり"},
+        {"text": "実装後に変更ファイルの一覧が提示されている", "passed": true, "evidence": "ステップ7に4ファイルの一覧表あり"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "bug-fix-undefined-error",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 83.1,
+        "tokens": 21245
+      },
+      "expectations": [
+        {"text": "バグ調査・修正方針を含む設計書が作成されている", "passed": true, "evidence": "設計書セクションにエラー概要・原因調査・修正方針あり"},
+        {"text": "設計書提示後にユーザーへのレビュー依頼文が出力されている", "passed": true, "evidence": "> レビュー依頼 のブロッククォートあり"},
+        {"text": "具体的な修正手順のTODOが作成されている", "passed": true, "evidence": "5項目のTODOリストあり"},
+        {"text": "TODO提示後にユーザーへの承認依頼文が出力されている", "passed": true, "evidence": "> 承認依頼 のブロッククォートあり"},
+        {"text": "実装後に変更ファイルの一覧が提示されている", "passed": true, "evidence": "変更ファイル一覧セクションあり"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "refactoring-date-helpers",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 97.5,
+        "tokens": 23296
+      },
+      "expectations": [
+        {"text": "リファクタリング方針を含む設計書が作成されている", "passed": true, "evidence": "DESIGN.mdに現状分析・分割方針・ファイル構成あり"},
+        {"text": "設計書提示後にユーザーへのレビュー依頼文が出力されている", "passed": true, "evidence": "ステップ3に【ゲート1】あり"},
+        {"text": "ファイル分割の具体的なTODOが作成されている", "passed": true, "evidence": "5項目のTODO（ファイル作成×3、JSDoc、index.ts）"},
+        {"text": "TODO提示後にユーザーへの承認依頼文が出力されている", "passed": true, "evidence": "ステップ5に【ゲート2】あり"},
+        {"text": "実装後に作成・変更ファイルの一覧が提示されている", "passed": true, "evidence": "ステップ7に5ファイルの一覧表あり"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "refactoring-date-helpers",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 96.3,
+        "tokens": 24885
+      },
+      "expectations": [
+        {"text": "リファクタリング方針を含む設計書が作成されている", "passed": true, "evidence": "リファクタリング設計書セクションに現状分析・方針あり"},
+        {"text": "設計書提示後にユーザーへのレビュー依頼文が出力されている", "passed": true, "evidence": "**[レビュー依頼]** ボールドスタイルあり"},
+        {"text": "ファイル分割の具体的なTODOが作成されている", "passed": true, "evidence": "4項目のTODOリストあり"},
+        {"text": "TODO提示後にユーザーへの承認依頼文が出力されている", "passed": true, "evidence": "**[承認依頼]** ボールドスタイルあり"},
+        {"text": "実装後に作成・変更ファイルの一覧が提示されている", "passed": true, "evidence": "3ファイルの一覧表あり"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 103.4, "stddev": 15.5, "min": 88.2, "max": 124.6},
+      "tokens": {"mean": 24268, "stddev": 1930, "min": 22611, "max": 26897}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.867, "stddev": 0.189, "min": 0.6, "max": 1.0},
+      "time_seconds": {"mean": 106.3, "stddev": 24.1, "min": 83.1, "max": 139.4},
+      "tokens": {"mean": 24980, "stddev": 3120, "min": 21245, "max": 28811}
+    },
+    "delta": {
+      "pass_rate": "+0.133 (スキルあり有利)",
+      "time_seconds": "-2.9s (スキルありがわずかに速い)",
+      "tokens": "-712 (スキルありがわずかに少ない)"
+    }
+  },
+  "analyst_observations": [
+    "eval-0でスキルなしがゲートを完全にスキップした（pass_rate 0.6）。これが主な差別化ポイント",
+    "eval-1/2ではスキルなしも同様のゲートメッセージを出力した。Claudeの基本モデルが確認求める傾向があるため",
+    "スキルは出力構造を一貫させる効果が高い（ステップ番号付き、【ゲート】マーカー）",
+    "ゲートアサーションが非識別的になる可能性あり（without_skillも多くのケースでパス）。より厳密なアサーション（ゲート後に実装コードが含まれていないか等）を検討すべき"
+  ]
+}

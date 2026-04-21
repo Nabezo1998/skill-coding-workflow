@@ -1,0 +1,34 @@
+{
+  "eval_id": 1,
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "バグ調査・修正方針を含む設計書が作成されている",
+      "passed": true,
+      "evidence": "workflow_output.md内に設計書セクションがあり、エラー概要・原因調査・修正方針が記載されている"
+    },
+    {
+      "text": "設計書提示後にユーザーへのレビュー依頼文が出力されている",
+      "passed": true,
+      "evidence": "> レビュー依頼: 上記の設計書をご確認ください... というブロッククォートスタイルのレビュー依頼文がある"
+    },
+    {
+      "text": "具体的な修正手順のTODOが作成されている",
+      "passed": true,
+      "evidence": "5項目のTODOリスト（エラー箇所特定、オプショナルチェーン、ログイン成功判定、エラーメッセージ、動作確認）が記載されている"
+    },
+    {
+      "text": "TODO提示後にユーザーへの承認依頼文が出力されている",
+      "passed": true,
+      "evidence": "> 承認依頼: 上記のTODOリストをご確認ください... というブロッククォートスタイルの承認依頼文がある"
+    },
+    {
+      "text": "実装後に変更ファイルの一覧が提示されている",
+      "passed": true,
+      "evidence": "変更ファイル一覧セクションに src/pages/Login.tsx の変更内容が表形式で記載されている"
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "eval_name": "bug-fix-undefined-error",
+  "prompt": "Bug fix: Cannot read properties of undefined in Login.tsx",
+  "assertions": [
+    {"name": "design_doc_created", "description": "Design document with bug analysis is created"},
+    {"name": "review_gate_1_present", "description": "Review request message is output after showing design doc"},
+    {"name": "todo_list_created", "description": "Specific fix steps TODO list is created"},
+    {"name": "review_gate_2_present", "description": "Approval request message is output after showing TODOs"},
+    {"name": "edited_files_listed", "description": "List of modified files is presented after implementation"}
+  ]
+}
