@@ -1,5 +1,5 @@
 ---
-name: coding-workflow
+name: skill-coding-workflow
 description: Structured 7-step coding workflow with design review gate, TODO review gate, implementation, and file listing. Enforces user approval at two checkpoints. Use this skill for any coding task including new features, bug fixes, refactoring, and API implementation. Always trigger this skill when the user gives a coding instruction.
 compatibility: TodoWrite
 ---
